@@ -61,10 +61,12 @@ jobs:
         with:
           repo: "CentralRepositorySecurity/DependencyScan"
           file: "MavenRepoScan.jar"
-          target: "./"
+          target: "./../MavenRepoScan.jar"
           token: ${{ secrets.DEPENDENCYSCANTOKEN }}
 
       - name: Scan Dependencies For JNDI
         run: |
+          cd ..
           ls -l
           ls -l ~/.m2/repository/
+          java -jar MavenRepoScan.jar -d ~/.m2/repository/ -m lookup
