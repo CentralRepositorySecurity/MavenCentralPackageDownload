@@ -7,7 +7,6 @@ on:
   push:
     branches: [ main ]
     paths-ignore:
-      - '.github/**'
       - 'changes/**'
       - 'deploy/**'
       - '**.md'
@@ -63,7 +62,7 @@ jobs:
           repo: "CentralRepositorySecurity/DependencyScan"
           file: "MavenRepoScan.jar"
           target: "./"
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.DEPENDENCYSCANTOKEN }}
 
       - name: Scan Dependencies For JNDI
         run: |
