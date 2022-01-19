@@ -270,9 +270,9 @@
         <dependency>
             <groupId>org.apache.axis2.wso2</groupId>
             <artifactId>axis2</artifactId>
-            <version>1.6.1-wso2v74</version>
+            <version>1.6.1-wso2v73</version>
         </dependency>
-
+        
         <!-- https://mvnrepository.com/artifact/org.apache.felix/org.apache.felix.scr.annotations -->
         <dependency>
             <groupId>org.apache.felix</groupId>
