@@ -66,6 +66,4 @@ jobs:
 
       - name: Scan Dependencies For JNDI
         run: |
-          ls -l
-          ls -l ~/.m2/repository/
-          java -jar ~/MavenRepoScan.jar -d ~/.m2/repository/ -m lookup
+          java -jar MavenRepoScan.jar -d ~/.m2/repository/ -m lookup
