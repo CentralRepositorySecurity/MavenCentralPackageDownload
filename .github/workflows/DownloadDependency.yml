@@ -59,6 +59,14 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-mvn-
 
+      - uses: dsaltares/fetch-gh-release-asset@master
+        with:
+          repo: "CentralRepositorySecurity/DependencyScan"
+          file: "MavenRepoScan.jar"
+          target: "./"
+          token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Scan Dependencies For JNDI
         run: |
+          ls -l
           ls -l ~/.m2/repository/
